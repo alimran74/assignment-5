@@ -7,6 +7,7 @@
     <!-- added daisyuI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
     <!-- added fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,164 @@
        
     </style>
 </head>
-<body class="poppins">
-    hello
+<body class="poppins w-full bg-base-300">
+    <header>
+        <section class="m-10 bg-slate-100 rounded-xl p-6 mt-2">
+<div class="flex  justify-between items-center">
+    <div class="items-center  justify-center flex  gap-4">
+        <img src="assets/logo.png" alt="">
+        <p class="text-4xl">Dev <span class="font-bold">Board</span></p>
+    </div>
+    <div class="flex  gap-6 items-center">
+        <div class="flex  bg-white gap-2 p-3 rounded-full">
+    <input type="checkbox" checked="checked" class="checkbox checkbox-primary" />
+    <p>23</p>
+</div>
+    <div>
+        <img src="./assets/theme-btn.png" alt="">
+    </div>
+</div>
+</div>
+        </section>
+    </header>
+<!-- header section  End -->
+
+
+    <main>
+        <section class="m-10">
+            <div class=" bg-slate-100 rounded-xl p-6 w-3/4">
+            <div class="flex justify-between border-dashed  border-b border-blue-500 pb-8">
+                <div  class="flex gap-6 bg-base-300  rounded-2xl p-2 items-center ">
+                    <div class="bg-slate-100 rounded-full p-4">
+                    <input  type="checkbox" checked="checked" class="checkbox checkbox-primary " />
+                </div>
+                    <div class="gap-3"> 
+                        <p class="text-xl">Task Assigned</p>
+                        <p class="font-bold text-2xl">06</p>
+                    </div>
+                </div>
+                <div class="flex items-center  bg-gradient-to-r from-blue-500 to-indigo-700 p-10 text-white rounded-2xl">
+                    <img src="./assets/board.png" alt="">
+                    <div><p class="text-2xl">Discover Something <br> New Today!</p></div>
+                </div>
+
+
+                <div class="flex  bg-base-300 rounded-2xl p-2 items-center">
+                    <div class="flex gap-2">
+                        <div>
+                      <img class="w-12  bg-slate-100" src="./assets/calender.png" alt="">
+                    </div>
+                      <div>
+                        <span id="date"></span> 
+                  
+                        <script>
+                          function updateDate() {
+                            const now = new Date();
+                            const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                            const monthsOfYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                            let dayOfWeek = daysOfWeek[now.getDay()]; 
+                            let month = monthsOfYear[now.getMonth()]; 
+                            let day = now.getDate(); 
+                            let year = now.getFullYear(); 
+                            document.getElementById('date').innerHTML = `${dayOfWeek}, ${month} ${day}, ${year}`;
+                          } 
+                          updateDate();
+                          setInterval(updateDate, 1000);
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- cards section -->
+            <div class="grid  grid-cols-3 gap-37">
+                <!-- card-01 -->
+                 <div class="mt-6 bg-base-300 p-8 w-86 rounded-2xl">
+                    <h3  class="bg-slate-100 p-4  w-32 rounded-xl mt-">ShopEase</h3>
+                    <h1 class="font-bold text-xl mt-4">Fix Mobile Button Issue </h1>
+                    <p class="w-70  bg-slate-100 mt-4 mb-4 h-24 rounded-xl  p-2">Debug using Chrome DevTools, check for overlapping truncate</p>
+                    <div class="flex gap-8 border-dashed border-t border-blue-500 justify-between">
+                        <div class="mt-8">
+                        <p>Deadline</p>
+                        <p>21 March 2025</p>
+                    </div>
+                        <button class="btn btn-primary mt-8">Completed</button>
+                    </div>
+                 </div>
+                 <!-- card--END -->
+                  <!-- card-01 -->
+                 <div class="mt-6 bg-base-300 p-8 w-86 rounded-2xl">
+                    <h3  class="bg-slate-100 p-4  w-32 rounded-xl mt-">ShopEase</h3>
+                    <h1 class="font-bold text-xl mt-4">Fix Mobile Button Issue </h1>
+                    <p class="w-70  bg-slate-100 mt-4 mb-4 h-24 rounded-xl  p-2">Debug using Chrome DevTools, check for overlapping truncate</p>
+                    <div class="flex gap-8 border-dashed border-t border-blue-500 justify-between">
+                        <div class="mt-8">
+                        <p>Deadline</p>
+                        <p>21 March 2025</p>
+                    </div>
+                        <button class="btn btn-primary mt-8">Completed</button>
+                    </div>
+                 </div>
+                 <!-- card--END -->
+                  <!-- card-01 -->
+                 <div class="mt-6 bg-base-300 p-8 w-86 rounded-2xl">
+                    <h3  class="bg-slate-100 p-4  w-32 rounded-xl mt-">ShopEase</h3>
+                    <h1 class="font-bold text-xl mt-4">Fix Mobile Button Issue </h1>
+                    <p class="w-70  bg-slate-100 mt-4 mb-4 h-24 rounded-xl  p-2">Debug using Chrome DevTools, check for overlapping truncate</p>
+                    <div class="flex gap-8 border-dashed border-t border-blue-500 justify-between">
+                        <div class="mt-8">
+                        <p>Deadline</p>
+                        <p>21 March 2025</p>
+                    </div>
+                        <button class="btn btn-primary mt-8">Completed</button>
+                    </div>
+                 </div>
+                 <!-- card--END -->
+                  <!-- card-01 -->
+                 <div class="mt-6 bg-base-300 p-8 w-86 rounded-2xl">
+                    <h3  class="bg-slate-100 p-4  w-32 rounded-xl mt-">ShopEase</h3>
+                    <h1 class="font-bold text-xl mt-4">Fix Mobile Button Issue </h1>
+                    <p class="w-70  bg-slate-100 mt-4 mb-4 h-24 rounded-xl  p-2">Debug using Chrome DevTools, check for overlapping truncate</p>
+                    <div class="flex gap-8 border-dashed border-t border-blue-500 justify-between">
+                        <div class="mt-8">
+                        <p>Deadline</p>
+                        <p>21 March 2025</p>
+                    </div>
+                        <button class="btn btn-primary mt-8">Completed</button>
+                    </div>
+                 </div>
+                 <!-- card--END -->
+                  <!-- card-01 -->
+                 <div class="mt-6 bg-base-300 p-8 w-86 rounded-2xl">
+                    <h3  class="bg-slate-100 p-4  w-32 rounded-xl mt-">ShopEase</h3>
+                    <h1 class="font-bold text-xl mt-4">Fix Mobile Button Issue </h1>
+                    <p class="w-70  bg-slate-100 mt-4 mb-4 h-24 rounded-xl  p-2">Debug using Chrome DevTools, check for overlapping truncate</p>
+                    <div class="flex gap-8 border-dashed border-t border-blue-500 justify-between">
+                        <div class="mt-8">
+                        <p>Deadline</p>
+                        <p>21 March 2025</p>
+                    </div>
+                        <button class="btn btn-primary mt-8">Completed</button>
+                    </div>
+                 </div>
+                 <!-- card--END -->
+                  <!-- card-01 -->
+                 <div class="mt-6 bg-base-300 p-8 w-86 rounded-2xl">
+                    <h3  class="bg-slate-100 p-4  w-32 rounded-xl mt-">ShopEase</h3>
+                    <h1 class="font-bold text-xl mt-4">Fix Mobile Button Issue </h1>
+                    <p class="w-70  bg-slate-100 mt-4 mb-4 h-24 rounded-xl  p-2">Debug using Chrome DevTools, check for overlapping truncate</p>
+                    <div class="flex gap-8 border-dashed border-t border-blue-500 justify-between">
+                        <div class="mt-8">
+                        <p>Deadline</p>
+                        <p>21 March 2025</p>
+                    </div>
+                        <button class="btn btn-primary mt-8">Completed</button>
+                    </div>
+                 </div>
+                 <!-- card--END -->
+            </div>
+        </div>
+        </section>
+    </main>
+    <script src="./js Files/index.js"></script>
 </body>
 </html>
