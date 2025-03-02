@@ -37,10 +37,10 @@
     <div class="flex  gap-6 items-center">
         <div class="flex  bg-white gap-2 p-3 rounded-full">
     <input type="checkbox" checked="checked" class="checkbox checkbox-primary" />
-    <p>23</p>
+    <span id="completed-task" class="text-xl text-stone-900 font-bold">23</span>
 </div>
     <div>
-        <img src="./assets/theme-btn.png" alt="">
+        <img src="./assets/theme-btn.png" onclick="changeBgcolor()" class="cursor-pointer" alt="">
     </div>
 </div>
 </div>
@@ -58,8 +58,8 @@
                     <input  type="checkbox" checked="checked" class="checkbox checkbox-primary " />
                 </div>
                     <div class="gap-3"> 
-                        <p class="text-xl">Task Assigned</p>
-                        <p class="font-bold text-2xl">06</p>
+                        <h3 class="font-mediumn text-nowrap">Task Assigned </h3>
+                        <div class="font-bold text-3xl">0<span id="assigned-task" ></span></div>
                     </div>
                 </div>
                 <button onclick="window.open('second.html','_blank')" class="cursor-pointer">
@@ -107,7 +107,7 @@
                         <p>Deadline</p>
                         <p>21 March 2025</p>
                     </div>
-                        <button class="btn btn-primary mt-8">Completed</button>
+                        <button  class="btn btn-primary com-btn mt-8">Completed</button>
                     </div>
                  </div>
                  <!-- card--END -->
@@ -121,7 +121,7 @@
                         <p>Deadline</p>
                         <p>21 March 2025</p>
                     </div>
-                        <button class="btn btn-primary mt-8">Completed</button>
+                        <button  class="btn btn-primary com-btn mt-8">Completed</button>
                     </div>
                  </div>
                  <!-- card--END -->
@@ -135,7 +135,7 @@
                         <p>Deadline</p>
                         <p>21 March 2025</p>
                     </div>
-                        <button class="btn btn-primary mt-8">Completed</button>
+                        <button  class="btn btn-primary com-btn mt-8">Completed</button>
                     </div>
                  </div>
                  <!-- card--END -->
@@ -149,7 +149,7 @@
                         <p>Deadline</p>
                         <p>21 March 2025</p>
                     </div>
-                        <button class="btn btn-primary mt-8">Completed</button>
+                        <button  class="btn btn-primary com-btn mt-8">Completed</button>
                     </div>
                  </div>
                  <!-- card--END -->
@@ -163,7 +163,7 @@
                         <p>Deadline</p>
                         <p>21 March 2025</p>
                     </div>
-                        <button class="btn btn-primary mt-8">Completed</button>
+                        <button  class="btn btn-primary com-btn mt-8">Completed</button>
                     </div>
                  </div>
                  <!-- card--END -->
@@ -177,23 +177,27 @@
                         <p>Deadline</p>
                         <p>21 March 2025</p>
                     </div>
-                        <button class="btn btn-primary mt-8">Completed</button>
+                        <button  class="btn btn-primary com-btn mt-8">Completed</button>
                     </div>
                  </div>
                  <!-- card--END -->
             </div>
         </div>
-        <div class="bg-slate-100 w-1/4 rounded-xl items-center justify-center text-center pt-8 mb-6">
+        <div id="activity-log" class="bg-slate-100 w-1/4 rounded-xl items-center justify-center text-center pt-8 mb-6">
             <div class=" flex items-center text-center justify-center gap-6">
                 <img class="w-8" src="./assets/activity.png" alt="">
                 <h1  class="text-3xl">Activity Log</h1>
             </div>
             <div class="border-dashed border-b border-blue-500 pb-6">
-                <button class="btn btn-primary mt-8">Clear history</button>
+                <button id="cler-task-btn"  class="btn btn-primary mt-8">Clear history</button>
+            </div>
+            <div id="task-container">
             </div>
         </div>
+        
         </section>
     </main>
-    <script src="./js Files/index.js"></script>
+    <script src="./js Files/navbutton.js"></script>
+    <script src="./js Files/completebtn.js"></script>
 </body>
 </html>
